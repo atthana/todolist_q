@@ -1,9 +1,12 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.todolist">
+    package="com.atthana.todolist">
     
+  <uses-permission android:name="android.permission.INTERNET"/>
    <application
-        android:label="todolist"
-        android:icon="@mipmap/ic_launcher">
+        android:label="TO DO LIST"
+        android:icon="@mipmap/launcher_icon"
+        android:usesCleartextTraffic="true">
+        
         <activity
             android:name=".MainActivity"
             android:launchMode="singleTop"
