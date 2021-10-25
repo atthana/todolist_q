@@ -97,8 +97,8 @@ class _TodolistState extends State<Todolist> {
 
   Future<void> getTodolist() async {
     List alltodo = [];
-    var url = Uri.http('172.20.10.2:8000', '/api/all-todolist');
-    var response = await http.get(url);
+    var url = Uri.http('172.20.10.2:8000', '/api/all-todolist');  // ใน Flutter เราต้องใชั ip ของ Mac นะ (ไม่ใช่ 192.168 เหมือนกับเครื่อง windows)
+    var response = await http.get(url);  // http://0.0.0.0:8000/api/all-todolist/  อันนี้คือจาก django นะ
     //var result = json.decode(response.body);
     var result = utf8.decode(response.bodyBytes);
     print(result);

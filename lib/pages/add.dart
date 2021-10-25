@@ -74,7 +74,7 @@ class _AddPageState extends State<AddPage> {
   Future postTodo() async {
     // var url = Uri.https('00fb-125-24-172-36.ngrok.io','/api/post-todolist');
     var url = Uri.http('172.20.10.2:8000','/api/post-todolist');  // ip from server จริงๆมันเลือกได้ด้วยนะ ว่าจะเป็น http หรือ https แต่ตอนนี้เราใช้ localhost เลยเป็น http เท่านั้น
-    Map<String, String> header = {"Content-type":"application/json"};
+    Map<String, String> header = {"Content-type":"application/json"};  // ใน Flutter เราต้องใชั ip ของ Mac นะ (ไม่ใช่ 192.168 เหมือนกับเครื่อง windows)
     String jsondata = '{"title":"${todo_title.text}", "detail":"${todo_detail.text}"}';
     var response = await http.post(url, headers: header, body: jsondata);
     print('------result-------');
