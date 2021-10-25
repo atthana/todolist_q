@@ -7,13 +7,15 @@
         {
             "name": "todolist",
             "request": "launch",
-            "type": "dart"
+            "type": "dart",
+            "program": "flutter/lib/main.dart"
         },
         {
             "name": "todolist (profile mode)",
             "request": "launch",
             "type": "dart",
-            "flutterMode": "profile"
+            "flutterMode": "profile",
+            "program": "flutter/lib/main.dart"
         }
     ]
 }
