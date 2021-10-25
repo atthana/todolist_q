@@ -97,7 +97,7 @@ class _TodolistState extends State<Todolist> {
 
   Future<void> getTodolist() async {
     List alltodo = [];
-    var url = Uri.http('192.168.0.100:8000', '/api/all-todolist');
+    var url = Uri.http('172.20.10.2:8000', '/api/all-todolist');
     var response = await http.get(url);
     //var result = json.decode(response.body);
     var result = utf8.decode(response.bodyBytes);
