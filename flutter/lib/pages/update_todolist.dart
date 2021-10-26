@@ -97,7 +97,7 @@ class _UpdatePageState extends State<UpdatePage> {
 
   Future updateTodo() async {
     //var url = Uri.https('00fb-125-24-172-36.ngrok.io','/api/post-todolist');
-    var url = Uri.http('192.168.0.100:8000','/api/update-todolist/$_v1');
+    var url = Uri.http('172.20.10.2:8000','/api/update-todolist/$_v1');
     Map<String, String> header = {"Content-type":"application/json"};
     String jsondata = '{"title":"${todo_title.text}", "detail":"${todo_detail.text}"}';
     var response = await http.put(url, headers: header, body: jsondata);
@@ -107,7 +107,7 @@ class _UpdatePageState extends State<UpdatePage> {
 
 
   Future deleteTodo() async {
-    var url = Uri.http('192.168.0.100:8000','/api/delete-todolist/$_v1');
+    var url = Uri.http('172.20.10.2:8000','/api/delete-todolist/$_v1');
     Map<String, String> header = {"Content-type":"application/json"};
     var response = await http.delete(url, headers: header);
     print('------result-------');
